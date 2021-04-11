@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="icon" href="./Assets/Icon.png">
+    <link href="./Styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body id='body'>
+    <div id='wpContainer' class='wpContainer'>
+        <div class="d-flex flex-column h-100">
+            <div id="mainWp" class="container">
+                <div class="row"> <!--current info row-->
+                    <div id="currentWp" class="col">
+                        <div class="row">
+                            <div id="tempWp" class="col-sm"> <!-- info -->
+                                <div id="location" class="row col d-md-inline-block">
+                                    City, STATE
+                                </div>
+                                <div class="row col d-md-inline-block" id="dayTime">weekDay</div>
+                                <div class="row col d-md-inline-block" id="summary">climate</div>
+                                <div class="row col d-md-inline-block" id="currentTemp"> # º</div>
+                            </div>
+                            <div class="col-sm  d-flex justify-content-end align-items-center"> <!-- image -->
+                                <img id='weatherICon' class="" 
+                                    src='https://cdn.iconscout.com/icon/free/png-256/cloud-sun-2196241-1909506.png'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> <!--Conditions row-->
+                    <div id='conditionsWp' class="col-md"> <!--Conditions-->
+
+                        <div class="row"> <!--Cloudiness-->
+                            <div id='cloudiness' class="col-md">cloudiness n%</div>
+                        </div>
+                        <div class="row"><!--humidity-->
+                            <div id='humidity' class="col-md">humidity n%</div>
+                        </div>
+                        <div class="row"><!--wind-->
+                            <div id='wind' class="col-md">Wind n%</div>
+                        </div>
+                    </div>
+                    <div id="forecastWp" class="col-md"> <!--forecast-->
+                        <ul class="nav nav-tabs" id="forecastTab">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#weekly">Weekly</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" data-toggle="tab" href="#daily">Hourly</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content"> <!--bottom tables-->
+                            <div class="tab-pane container active" id="daily"> <!--daily table-->
+                                <table id="dailyForecast" width=100%>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Conditions</th>
+                                        <th>Temp</th>
+                                      </tr>
+                                </table>
+                            </div>
+                            <div class="tab-pane container fade" id="weekly"> <!--weekly table-->
+                                <table id="weeklyForecast" width=100%>
+                                    <tr>
+                                        <th>Day</th>
+                                        <th>Conditions</th>
+                                        <th>Lo</th>
+                                        <th>Hi</th>
+                                      </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> <!--footer row-->
+                    <div id="footerWP" class="col text-center d-flex justify-content-end align-items-center pr-0">
+                        <div class="rowl " >
+                            <div class="co">
+                                <div class='d-md-inline-block' id="footer">last updated : <span id="lastUpdateTime">00/00/00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./Scripts/script.js"></script>
+</body>
+</html>

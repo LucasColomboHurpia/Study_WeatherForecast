@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(83, 82, 82); 
+    margin: 0%;
+    background: url(../Assets/weatherBackground/ThunderstormDayNight.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.wpContainer{
+    min-height: 500px;
+}
+
+#mainWp{
+    color: white;
+    padding: 20px;
+    resize: vertical;
+}
+
+#currentWp{
+    background-color: rgba(44, 66, 81, 0.445);
+    color: white;
+    resize: vertical;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#weatherICon {
+    max-width: 100%;
+    height: auto;
+}
+#currentTemp{
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#conditionsWp {
+    background-color: rgba(189, 72, 29, 0.521);
+    color: white;
+    padding: 20px;
+    resize: vertical;
+    border-bottom-left-radius: 10px;
+}
+
+#forecastWp {
+    background-color: rgba(28, 28, 134, 0.507);
+    color: white;
+    padding: 20px;
+    resize: vertical;
+    font-size: 1em;
+}
+
+#forecastTab li a.active {
+    border-bottom-color: transparent;
+    background-color: rgba(189, 72, 29, 0.521);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#forecastTab li a {
+    border-bottom-color: transparent;
+    color: white;
+    font-weight: 400;
+}
+
+/* icon img */
+#weatherICon{
+    width: 130px;
+    height: 130px;
+}
+
+#footerWP {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.507);
+}
+
+#footer{
+    background-color: rgba(255, 255, 255, 0.253);
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+ }
