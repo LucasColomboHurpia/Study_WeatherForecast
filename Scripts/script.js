@@ -150,6 +150,7 @@ const setBackground = (condition, dayNightVar) =>{
 		if(condition=='few clouds'){newBg = './Assets/weatherBackground/dayBg/fewclouds.jpg'}
 		if(condition=='scattered clouds'){newBg = './Assets/weatherBackground/dayBg/Clouded.jpg'}
 		if(condition=='broken clouds'){newBg = './Assets/weatherBackground/dayBg/veryclouded.jpg'}
+		if(condition=='overcast clouds'){newBg = './Assets/weatherBackground/dayBg/veryclouded.jpg'}
 		if(condition=='shower rain'){newBg = './Assets/weatherBackground/dayBg/rainyday.jpg'}
 		if(condition=='rain'){newBg = './Assets/weatherBackground/dayBg/rainyday.jpg'}
 		if(condition=='thunderstorm'){newBg = './Assets/weatherBackground/ThunderstormDayNight.jpg'}
@@ -161,6 +162,7 @@ const setBackground = (condition, dayNightVar) =>{
 		if(condition=='few clouds'){newBg = './Assets/weatherBackground/nightBg/fewclouds.jpg'}
 		if(condition=='scattered clouds'){newBg = './Assets/weatherBackground/nightBg/clouded.jpg'}
 		if(condition=='broken clouds'){newBg = './Assets/weatherBackground/nightBg/veryclouded.jpg'}
+		if(condition=='overcast clouds'){newBg = './Assets/weatherBackground/dayBg/veryclouded.jpg'}
 		if(condition=='shower rain'){newBg = './Assets/weatherBackground/nightBg/rainy.jpg'}
 		if(condition=='rain'){newBg = './Assets/weatherBackground/nightBg/rainy.jpg'}
 		if(condition=='thunderstorm'){newBg = './Assets/weatherBackground/ThunderstormDayNight.jpg'}
