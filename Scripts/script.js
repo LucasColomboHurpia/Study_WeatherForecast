@@ -118,6 +118,7 @@ const setMoodByCondition = (x) =>{
 	///few clouds
 	///scattered clouds
 	///broken clouds
+	///overcast clouds
 	///shower rain
 	///rain
 	///thunderstorm
@@ -169,7 +170,9 @@ const setBackground = (condition, dayNightVar) =>{
 		if(condition=='snow'){newBg = './Assets/weatherBackground/nightBg/snow.jpg'}
 		if(condition=='mist'){newBg = './Assets/weatherBackground/nightBg/mists.jpg'}
 	}
-	$('#body').css('background-image', 'url('+newBg+')')
+	if(newBg!=undefined){
+	$('#body').css('background-image', 'url('+newBg+')')}
+	else{console.log('undefined background!')}
 }
 //converts unix time (for dates)
 const timeConverter=(UNIX_timestamp)=>{
