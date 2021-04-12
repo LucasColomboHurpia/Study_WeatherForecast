@@ -118,7 +118,6 @@ const setMoodByCondition = (x) =>{
 	///few clouds
 	///scattered clouds
 	///broken clouds
-	///overcast clouds
 	///shower rain
 	///rain
 	///thunderstorm
@@ -129,17 +128,20 @@ const setMoodByCondition = (x) =>{
 const setIcon = (dayNightVar) =>{
 	let icon = $('#weatherICon')
 	let condition = $('#summary').html();
-
+	let timeOfDay 
 	//if dayNightVar is 'd' use the day icons, otherwise use the night icons
-	if(condition=='clear sky'){icon.attr('src','http://openweathermap.org/img/wn/01'+dayNightVar+'@2x.png')}
-	if(condition=='few clouds'){icon.attr('src','http://openweathermap.org/img/wn/02'+dayNightVar+'@2x.png')}
-	if(condition=='scattered clouds'){icon.attr('src','http://openweathermap.org/img/wn/03'+dayNightVar+'@2x.png')}
-	if(condition=='broken clouds'){icon.attr('src','http://openweathermap.org/img/wn/04'+dayNightVar+'@2x.png')}
-	if(condition=='shower rain'){icon.attr('src','http://openweathermap.org/img/wn/09'+dayNightVar+'@2x.png')}
-	if(condition=='rain'){icon.attr('src','http://openweathermap.org/img/wn/10'+dayNightVar+'@2x.png')}
-	if(condition=='thunderstorm'){icon.attr('src','http://openweathermap.org/img/wn/11'+dayNightVar+'@2x.png')}
-	if(condition=='snow'){icon.attr('src','http://openweathermap.org/img/wn/13'+dayNightVar+'@2x.png')}
-	if(condition=='mist'){icon.attr('src','http://openweathermap.org/img/wn/50'+dayNightVar+'@2x.png')}
+	if(dayNightVar=='d'){timeOfDay='Day'} else {timeOfDay='Night'}
+	
+	if(condition=='clear sky'){icon.attr('src','./Assets/Icons/'+timeOfDay+'/01d@2x.png')}
+	if(condition=='few clouds'){icon.attr('src','./Assets/Icons/'+timeOfDay+'/02d@2x.png')}
+	if(condition=='scattered clouds'){icon.attr('src','./Assets/Icons/Day/03d@2x.png')}
+	if(condition=='broken clouds'){icon.attr('src','./Assets/Icons/Day/04d@2x.png')}
+	if(condition=='overcast clouds'){icon.attr('src','./Assets/Icons/Day/04d@2x.png')}
+	if(condition=='shower rain'){icon.attr('src','./Assets/Icons/Day/09d@2x.png')}
+	if(condition=='rain'){icon.attr('src','./Assets/Icons/'+timeOfDay+'/10d@2x.png')}
+	if(condition=='thunderstorm'){icon.attr('src','./Assets/Icons/Day/11d@2x.png')}
+	if(condition=='snow'){icon.attr('src','./Assets/Icons/Day/13d@2x.png')}
+	if(condition=='mist'){icon.attr('src','./Assets/Icons/Day/50d@2x.png')}
 
 	setBackground(condition, dayNightVar);
 }
