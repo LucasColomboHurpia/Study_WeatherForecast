@@ -10,6 +10,7 @@ onload = function () {
 	//checks if user location is enabled
 	if(navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(position =>{
+			locationEnableStyleSequence();
 			long = JSON.stringify(position.coords.longitude) //gets user's longitude
 			lat = JSON.stringify(position.coords.latitude) //gets user's latitude
 			let apiKeyWeather = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid=9385b8268cca9aab82984c29d70ac185'
@@ -196,3 +197,12 @@ const convertKelvin = (x) =>{
 }
 //pops up alert if location is null
 const alert = (err) =>{alert("Please Enable your location!"); console.log(err)}
+//change style when location is found
+const locationEnableStyleSequence = () => {
+	$('#location').removeClass('text-danger')
+	$('#dayTime').removeClass('text-danger')
+	$('#summary').removeClass('text-danger')
+	$('#location').removeClass('display-4')
+	$('#dayTime').removeClass('display-4')
+	$('#summary').removeClass('display-4')
+}

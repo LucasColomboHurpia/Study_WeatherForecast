@@ -37,11 +37,15 @@ body{
 }
 
 #conditionsWp {
-    background-color: rgba(189, 72, 29, 0.521);
+    background-color: rgba(189, 72, 29, 0.322);
     color: white;
     padding: 20px;
     resize: vertical;
     border-bottom-left-radius: 10px;
+}
+
+.conditionsTable{
+    font-size: 1.2rem;
 }
 
 #forecastWp {
